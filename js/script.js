@@ -119,54 +119,46 @@
   }
 
   if (greetingModal && greetingMessage) {
-    // Track visits in localStorage
-    let visits = 0;
+    // Professional Greeting Logic
+    const hour = new Date().getHours();
+    let timeGreeting = "Welcome";
+    if (hour < 12) timeGreeting = "Good morning";
+    else if (hour < 18) timeGreeting = "Good afternoon";
+    else timeGreeting = "Good evening";
+
+    // Personalize with stored name if present, but keep it subtle
+    const storedName =
+      (typeof localStorage !== "undefined" &&
+        localStorage.getItem("visitor_name")) ||
+      "";
+
+    // Track visits (User requested counter)
+    let visits = 1;
     if (typeof localStorage !== "undefined") {
       const storedVisits = Number(localStorage.getItem("visit_count") || 0);
       visits = Number.isFinite(storedVisits) ? storedVisits + 1 : 1;
       localStorage.setItem("visit_count", visits);
     }
 
-    const hour = new Date().getHours();
+    const namePart = storedName ? `, ${storedName}` : "";
+    const visitPart = ` (Visit #${visits})`;
+    const finalMessage = `${timeGreeting}${namePart}. Welcome to my portfolio.${visitPart}`;
 
-    let message;
+    greetingMessage.textContent = finalMessage;
 
-    if (hour < 12) {
-      message = "Good morning!";
-    } else if (hour < 18) {
-      message = "Good afternoon!";
-    } else if (hour < 22) {
-      message = "Good evening!";
-    } else {
-      message = "Good night!";
-    }
-
-    // Personalize with stored name if present
-    const storedName =
-      (typeof localStorage !== "undefined" &&
-        localStorage.getItem("visitor_name")) ||
-      "";
-
-    // Build a friendly string, e.g., "Good morning, Alex! Visit #3"
-    const nameChunk = storedName ? `, ${storedName}` : "!";
-    const visitChunk = visits
-      ? `You have visited this page ${visits} time${
-          visits === 1 ? "" : "s"
-        }.`
-      : "";
-
-    // Two-line message: greeting on first line, visit info on second
-    greetingMessage.innerHTML = `${message}${nameChunk}<br>${visitChunk}`;
+    // Show toast
     greetingModal.hidden = false;
     requestAnimationFrame(() => {
       greetingModal.classList.add("is-visible");
     });
+
+    // Auto-hide after 4 seconds
     setTimeout(() => {
       greetingModal.classList.remove("is-visible");
       setTimeout(() => {
         greetingModal.hidden = true;
       }, 500);
-    }, 5000);
+    }, 4000);
   }
 
   // Expand/Collapse entire sections when clicking the eye icon

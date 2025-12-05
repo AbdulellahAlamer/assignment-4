@@ -46,6 +46,11 @@
    - AI Output: Fetch call to GitHub REST API, parsing repo fields for display.
    - My Edits: Added error/empty states, loading placeholders, and limited to recent repos; removed token requirement.
    - Outcome: Latest public repos render as cards with language, stars, and updated date.
+8. help me doing the animation for the certificates section
+   - Prompt: “Make the cards show up from the left when they appear on screen.”
+   - AI Output: IntersectionObserver code and CSS transition for .card elements.
+   - My Edits: Tuned threshold to 0.3 for smoother triggering and added staggered animation delays.
+   - Outcome: Subtle entry animation that activates only when visible.
 
 ## Benefits
 
