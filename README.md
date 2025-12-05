@@ -60,8 +60,9 @@ All details are in [`docs/ai-usage-report.md`](docs/ai-usage-report.md).
 ## 🚀 Live Deployment
 
 See the live website here:  
-🔗 **[https://your-username.github.io/your-repo-name/](https://your-username.github.io/your-repo-name/)**  
-_(Replace this link with your actual GitHub Pages, Netlify, or Vercel URL.)_
+🔗 **[https://abdulellahAlamer.github.io/assignment-4/](https://abdulellahAlamer.github.io/assignment-4/)**  
+
+The site is automatically deployed to GitHub Pages when changes are pushed to the main branch.
 
 ---
 
