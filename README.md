@@ -64,6 +64,8 @@ See the live website here:
 
 The site is automatically deployed to GitHub Pages when changes are pushed to the main branch.
 
+📖 **For setup instructions, see [docs/deployment-guide.md](docs/deployment-guide.md)**
+
 ---
 
 ### 🪄 Notes
