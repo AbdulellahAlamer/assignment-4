@@ -51,6 +51,7 @@ AI was used **responsibly** and **openly** while making this project.
 All details are in [`docs/ai-usage-report.md`](docs/ai-usage-report.md).
 
 ### Summary of AI use (short)
+
 - ChatGPT (GPT-5) assisted with UI polish and JS features (book fetch, GitHub repos, validation, greetings, timers).
 - GitHub Copilot provided inline suggestions during refactors.
 - Full detail and prompts are logged in `docs/ai-usage-report.md`.
@@ -60,7 +61,7 @@ All details are in [`docs/ai-usage-report.md`](docs/ai-usage-report.md).
 ## 🚀 Live Deployment
 
 See the live website here:  
-🔗 **[https://your-username.github.io/your-repo-name/](https://your-username.github.io/your-repo-name/)**  
+🔗 **[https://abdulellahalamer.github.io/assignment-4/](https://abdulellahalamer.github.io/assignment-4/)**  
 _(Replace this link with your actual GitHub Pages, Netlify, or Vercel URL.)_
 
 ---
